@@ -3,8 +3,10 @@
 #include "colors.h"
 #include "Textures.h"
 #include "FontManager.h"
+#include "Inputs.h"
 #include <string>
 #include <memory>
+#include <functional>
 #include <SFML\Graphics.hpp>
 
 
@@ -27,5 +29,7 @@ namespace dfr
 	sf::RenderWindow * getWindow();
 
 	void init(config_r config);
+
+	void run(std::function<void(double)> onTick);
 }
 

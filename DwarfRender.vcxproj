@@ -148,6 +148,7 @@
     <ClCompile Include="DwarfRender.cpp" />
     <ClCompile Include="DwarfRender\main.cpp" />
     <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="Inputs.cpp" />
     <ClCompile Include="Terminal.cpp" />
     <ClCompile Include="Textures.cpp" />
   </ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="colors.h" />
     <ClInclude Include="DwarfRender.h" />
     <ClInclude Include="FontManager.h" />
+    <ClInclude Include="Inputs.h" />
     <ClInclude Include="Terminal.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="vchars.h" />
