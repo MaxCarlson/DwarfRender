@@ -3,14 +3,22 @@
 
 namespace dfr
 {
-	std::vector<sf::Event> events;
+	std::queue<sf::Event> events;
+	int fontX;
+	int fontY;
 
 	namespace mstate
 	{
 		bool isWindowFocused = true;
 		std::array<bool, 7> mouseButtonsPressed;
 		int mouseX = 0;
-		int mousey = 0;
+		int mouseY = 0;
+	}
+
+	void initInputs(const int fontSizeX, const int fontSizeY)
+	{
+		fontX = fontSizeX;
+		fontY = fontSizeY;
 	}
 
 	bool isWindowFocused()
@@ -27,18 +35,23 @@ namespace dfr
 	{
 		std::fill(mstate::mouseButtonsPressed.begin(), mstate::mouseButtonsPressed.end(), false);
 		mstate::mouseX = 0;
-		mstate::mousey = 0;
+		mstate::mouseY = 0;
 	}
 
 	void setMousePosition(const int x, const int y)
 	{
 		mstate::mouseX = x;
-		mstate::mousey = y;
+		mstate::mouseY = y; 
 	}
 
 	std::pair<int, int> getMousePosition()
 	{
-		return std::make_pair(mstate::mouseX, mstate::mousey);
+		return std::make_pair(mstate::mouseX / fontX, mstate::mouseY / fontY);
+	}
+
+	std::pair<int, int> getMousePositionPx()
+	{
+		return std::make_pair(mstate::mouseX, mstate::mouseY);
 	}
 
 	void setMouseState(const int button, const bool state)
@@ -53,6 +66,11 @@ namespace dfr
 
 	void keyPressed(sf::Event & event)
 	{
-		events.emplace_back(event);
+		events.push(event);
+	}
+
+	std::queue<sf::Event> & readInput()
+	{
+		return events;
 	}
 }

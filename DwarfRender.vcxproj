@@ -146,7 +146,7 @@
   <ItemGroup>
     <ClCompile Include="colors.cpp" />
     <ClCompile Include="DwarfRender.cpp" />
-    <ClCompile Include="DwarfRender\main.cpp" />
+    <ClCompile Include="DwarfRender\test.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="imgui-SFML.cpp" />
     <ClCompile Include="imgui.cpp" />

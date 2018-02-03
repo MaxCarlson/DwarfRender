@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <queue>
 
 namespace dfr
 {
@@ -14,6 +15,8 @@ namespace dfr
 		WHEEL_DOWN
 	};
 
+	void initInputs(const int fontSizeX, const int fontSizeY);
+
 	extern bool isWindowFocused();
 
 	extern void setWindowFocus(const bool f);
@@ -23,6 +26,8 @@ namespace dfr
 	extern void setMousePosition(const int x, const int y);
 
 	extern std::pair<int, int> getMousePosition();
+
+	extern std::pair<int, int> getMousePositionPx();
 
 	extern void setMouseState(const int button, const bool state);
 	extern bool getMouseState(const int button);
@@ -36,5 +41,8 @@ namespace dfr
 
 		sf::Event event;
 	};
+
+	extern std::queue<sf::Event> & readInput();
+
 }
 
