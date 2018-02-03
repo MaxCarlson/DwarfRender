@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="colors.cpp" />
+    <ClCompile Include="DrawLayers.cpp" />
     <ClCompile Include="DwarfRender.cpp" />
     <ClCompile Include="DwarfRender\test.cpp" />
     <ClCompile Include="FontManager.cpp" />
@@ -153,14 +154,17 @@
     <ClCompile Include="imgui_demo.cpp" />
     <ClCompile Include="imgui_draw.cpp" />
     <ClCompile Include="Inputs.cpp" />
+    <ClCompile Include="Layer.cpp" />
     <ClCompile Include="Terminal.cpp" />
     <ClCompile Include="Textures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colors.h" />
+    <ClInclude Include="DrawLayers.h" />
     <ClInclude Include="DwarfRender.h" />
     <ClInclude Include="FontManager.h" />
     <ClInclude Include="Inputs.h" />
+    <ClInclude Include="Layer.h" />
     <ClInclude Include="Terminal.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="vchars.h" />
